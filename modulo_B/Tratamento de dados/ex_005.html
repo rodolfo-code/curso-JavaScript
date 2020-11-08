@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu salario em diferentes partes do mundo!</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        let nome = window.prompt('Olá, informe seu nome:')
+        window.alert(`Seja bem vindo ${nome}`)
+        let salario = window.prompt('Agora nos informe seu salário atual que converteremos para moedas de diversos paises:')
+        let pais = window.prompt('Digite o pais para convertermos a moeda:')
+        document.writeln(`Seu salário atual é de: ${salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</br>`)
+
+
+        
+
+        for (i = 0; i < 10; i += 1) {
+            if (pais === 'EUA') {
+                let convert = salario / 5.36
+                document.writeln(`Seu salário atual é de: ${convert.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}`)
+            } else if (pais === 'EUR') {
+                convert = salario / 6.37
+                document.writeln(`Seu salário atual é de: ${convert.toLocaleString('pt-BR', {style: 'currency', currency: 'EUR'})}</br>`)
+            }
+        }
+    </script>
+</body>
+</html>
