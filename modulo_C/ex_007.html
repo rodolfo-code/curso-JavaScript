@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 15pt Arial;
+        }
+        input {
+            font: normal 15pt arial;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="cortitulo">Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()" id="mouse">
+    <div id="res">Resultado</div>
+
+    <script>
+        let h = document.getElementById('cortitulo')
+        let a = document.getElementById('mouse')
+        document.getElementsByTagName('input')[2].addEventListener('click', mouseemcima)
+
+        function somar() {
+            let tn1 = document.getElementById('txtn1')
+            let tn2 = document.querySelector('input#txtn2')
+            let res = document.getElementById('res')
+            let n1 = Number(tn1.value)
+            let n2 = Number(tn2.value)
+            let s = n1 + n2
+            res.innerText = `A soma entre ${n1} e ${n2} é igual a ${s}`
+        }
+        function mouseemcima() {
+            h.style.background = 'blue'
+        }
+    </script>
+</body>
+</html>
