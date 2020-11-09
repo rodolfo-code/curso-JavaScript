@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando DOM</title>
+    <style>
+        body {
+            background-color: darkolivegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Treinando DOM com If, alert e write</h1>
+    <p>É assim que o DOM funciona</p>
+    <p class="classe">Aqui vai o resultado</p>
+    <p id="paragrafo">Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+    <div id="msg">Clique em mim</div>
+    <div id="novo-nome"></div>
+
+    <script>
+        let nome = prompt('Digite seu nome')
+        let d = document.querySelector('#novo-nome')
+
+        if (nome === 'rodolfo') {
+            d.innerHTML = 'Seja bem vindo ' + nome;
+            //document.getElementById('#novo-nome').style.background = 'white'
+            document.getElementsByTagName('p')[0].style.background = 'black'
+            document.getElementsByTagName('p')[0].style.color = 'yellow'
+            document.getElementsByClassName('classe')[0].style.background = 'orange'
+
+        } else {
+            d.innerHTML = 'Bem vindo estranho'
+        }
+    </script>
+</body>
+</html>
